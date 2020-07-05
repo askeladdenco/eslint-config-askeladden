@@ -1,12 +1,9 @@
 {
-  "name": "@otovo/eslint-config-otovo",
-  "version": "3.0.0",
-  "description": "A set of eslint-configs for Otovo projects",
+  "name": "@askeladden/eslint-config",
+  "version": "0.0.1",
+  "description": "A set of eslint-configs for Askeladden projects, forked from @otovo/eslint-config-otovo.",
   "keywords": [
-    "eslint",
-    "flow",
-    "react",
-    "otovo"
+    "eslint"
   ],
   "main": "index.js",
   "scripts": {
@@ -14,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/otovo/eslint-config-otovo.git"
+    "url": "git+https://github.com/askeladdenco/eslint-config.git"
   },
-  "author": "Rikard Eide <rix1@otovo.com>",
+  "author": "Tomas Fagerbekk <tomas@askeladden.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/otovo/eslint-config-otovo/issues"
+    "url": "https://github.com/askeladdenco/eslint-config/issues"
   },
-  "homepage": "https://github.com/otovo/eslint-config-otovo#readme",
+  "homepage": "https://github.com/askeladdenco/eslint-config#readme",
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
@@ -30,7 +27,6 @@
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-flowtype": "^3.11.1",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
