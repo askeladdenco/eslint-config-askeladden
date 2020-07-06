@@ -14,6 +14,16 @@ const NAME_MAP = {
     'configs',
     'recommended',
   ],
+  './configs/base': [
+    '@typescript-eslint/eslint-plugin',
+    'configs',
+    'base',
+  ],
+  './configs/eslint-recommended': [
+    '@typescript-eslint/eslint-plugin',
+    'configs',
+    'eslint-recommended',
+  ]
 };
 
 const recursiveResolve = (obj, keyArray) => {
