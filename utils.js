@@ -50,19 +50,19 @@ const doImport = (name) => {
 
 const flattenEslintConfig = (config) => {
   // Accepts an eslint config. Loops through its extends, and returns a flattened version
-  if (!config.extends || config.extends.length === 0) {
-    return config.rules;
-  }
   let rules = config.rules || {};
   const extend = config.extends || [];
+  let plugins = config.plugins || [];
   for (const confPath of extend) {
     const nextConfig = flattenEslintConfig(doImport(confPath));
     rules = { ...rules, ...nextConfig.rules };
+    plugins = [ ...plugins, ...nextConfig.plugins ];
   }
   return {
     ...config,
     extends: [],
     rules,
+    plugins,
   };
 };
 
