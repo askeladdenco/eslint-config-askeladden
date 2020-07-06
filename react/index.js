@@ -1,6 +1,7 @@
+const flatten = require('../utils').flattenEslintConfig;
 const jsRules = require('../javascript/rules');
 
-module.exports = {
+module.exports = flatten({
   extends: [
     'airbnb',
     'plugin:react/recommended',
@@ -43,4 +44,4 @@ module.exports = {
     ],
     'react/no-did-mount-set-state': ['off'],
   }),
-};
+});

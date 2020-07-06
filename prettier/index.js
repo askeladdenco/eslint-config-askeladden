@@ -1,4 +1,6 @@
-module.exports = {
+const flatten = require('../utils').flattenEslintConfig;
+
+module.exports = flatten({
   extends: [
     'plugin:prettier/recommended', // enables-eslint-plugin-prettier, sets the prettier/prettier rule to "error", extends eslint-config-prettier so that we can set prettier options in .prettierrc
   ],
@@ -6,4 +8,4 @@ module.exports = {
   //   "prettier", enabled by the plugin;prettier/recommneded extension
   // ],
   parser: 'babel-eslint',
-};
+});
