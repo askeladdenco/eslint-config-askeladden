@@ -7,7 +7,7 @@ module.exports = flatten({
   ],
   rules: {
     '@typescript-eslint/indent': ['error', 2],
-    '@typescript-eslint/camelcase': false,
+    '@typescript-eslint/camelcase': 0,
   },
   settings: {
     'import/resolver': {
