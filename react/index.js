@@ -19,7 +19,7 @@ module.exports = {
     // See https://github.com/yannickcr/eslint-plugin-react/issues/1731 for more info.
     'react/destructuring-assignment': ['warn', 'always'],
 
-    'react/jsx-filename-extension': ['off', { extensions: ['.jsx'] }],
+    'react/jsx-filename-extension': [0, { extensions: ['.jsx'] }],
     'react/sort-comp': [
       1,
       {
@@ -41,6 +41,6 @@ module.exports = {
         allowChildren: false,
       },
     ],
-    'react/no-did-mount-set-state': ['off'],
+    'react/no-did-mount-set-state': [0],
   }),
 };
