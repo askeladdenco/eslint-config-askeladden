@@ -5,7 +5,7 @@ This repo contains sets of opinionated linting rules (eslint-configs) for Askela
 ## Installing
 
 ```sh
-npx install-peerdeps --dev @askeladdeneslint-config-askeladden
+npx install-peerdeps --dev @askeladden/eslint-config-askeladden
 
 # Alternatively, install correct version of each package listed by:
 npm info "@askeladden/eslint-config-askeladden@latest" peerDependencies
