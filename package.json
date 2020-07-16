@@ -1,6 +1,6 @@
 {
   "name": "@askeladden/eslint-config-askeladden",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A set of eslint-configs for Askeladden projects, forked from @otovo/eslint-config-otovo.",
   "keywords": [
     "eslint"
