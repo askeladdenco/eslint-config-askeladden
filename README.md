@@ -17,7 +17,8 @@ npm install --save-dev @askeladden/eslint-config
 Depending on your project, add one of these to your `.eslintrc` file:
 
 - **Pure JS:** `@askeladden/eslint-config`
-- **React without types:** `@askeladden/eslint-config/react-recommended`
+- **React JS:** `@askeladden/eslint-config/react-recommended`
+- **Typescript:** `@askeladden/eslint-config/typescript-recommended`
 - **React with Typescript:** `@askeladden/eslint-config/react-typescript-recommended`
 
 Example `.eslintrc` using **React with Typescript**:
@@ -62,6 +63,7 @@ Instead of adding rule sets one by one, you can use one of four collections:
 
 - `@askeladden/eslint-config`
 - `@askeladden/eslint-config/react-recommended`
+- `@askeladden/eslint-config/typescript-recommended`
 - `@askeladden/eslint-config/react-typescript-recommended`
 
 You use collections in the same way you add rule sets: By adding them to the `extends` array in `.eslintrc`:
@@ -78,14 +80,14 @@ You use collections in the same way you add rule sets: By adding them to the `ex
 
 The following is a overview of the rules each collection includes:
 
-|                     | `default` | `react-recommended` | `react-typescript-recommended` |
-| ------------------- | --------- | ------------------- | ------------------------------ |
-| javascript          | ✅        | ✅                  | ✅                             |
-| prettier            | ✅        | ✅                  | ✅                             |
-| react               |           | ✅                  | ✅                             |
-| prettier-react      |           | ✅                  | ✅                             |
-| typescript          |           |                     | ✅                             |
-| prettier-typescript |           |                     | ✅                             |
+|                     | `default` | `react-recommended` | `typescript-reecommended` | `react-typescript-recommended` |
+| ------------------- | --------- | ------------------- | ------------------------- | ------------------------------ |
+| javascript          | ✅        | ✅                  | ✅                        | ✅                             |
+| prettier            | ✅        | ✅                  | ✅                        | ✅                             |
+| react               |           | ✅                  |                           | ✅                             |
+| prettier-react      |           | ✅                  |                           | ✅                             |
+| typescript          |           |                     | ✅                        | ✅                             |
+| prettier-typescript |           |                     | ✅                        | ✅                             |
 
 ## Publishing
 
