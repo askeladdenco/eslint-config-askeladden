@@ -14,4 +14,12 @@ module.exports = {
       groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
     },
   ],
+  "no-use-before-define": [
+    "error",
+    {
+      "functions": false,
+      "classes": false,
+      "variables": false
+    }
+  ],
 };
