@@ -6,6 +6,32 @@ module.exports = {
   rules: {
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/camelcase': 0,
+    "@typescript-eslint/no-inferrable-types": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/no-unused-vars": 1,
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/no-empty-interface": 0,
+
+    // Disable TS-specific rules. This is already specified in the javascript package
+    "@typescript-eslint/no-use-before-define": 0,
+
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        "types": {
+          "String": {
+            "message": "Use string instead",
+            "fixWith": "string"
+          },
+
+          "{}": {
+            "message": "This allows a function to be called with any argument. Remove {} entirely, or use object if you really want anything allowed.",
+            "fixWith": ""
+          }
+        }
+      }
+    ],
   },
   settings: {
     'import/resolver': {
