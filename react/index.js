@@ -14,6 +14,7 @@ module.exports = {
     // We want to encourage destructuring, but in order to do this incrementally we'll on warng about it.
     // See https://github.com/yannickcr/eslint-plugin-react/issues/1731 for more info.
     'react/destructuring-assignment': ['warn', 'always'],
+    "react/jsx-props-no-spreading": 1,
 
     // Does not support dynamic type props :(
     "react/button-has-type": 0,
