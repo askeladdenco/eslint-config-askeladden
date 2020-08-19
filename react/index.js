@@ -15,6 +15,9 @@ module.exports = {
     // See https://github.com/yannickcr/eslint-plugin-react/issues/1731 for more info.
     'react/destructuring-assignment': ['warn', 'always'],
 
+    // Does not support dynamic type props :(
+    "react/button-has-type": 0,
+
     'react/jsx-filename-extension': [0, { extensions: ['.jsx'] }],
     'react/sort-comp': [
       1,
