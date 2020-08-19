@@ -8,6 +8,7 @@ module.exports = {
   'no-underscore-dangle': [0],
   'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
   'import/prefer-default-export': [0],
+  "import/extensions": 0,
   'import/order': [
     'error',
     {
