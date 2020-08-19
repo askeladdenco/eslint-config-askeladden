@@ -23,5 +23,6 @@ module.exports = {
       "variables": false
     }
   ],
-  "no-console": 2
+  "no-console": 2,
+  "consistent-return": 0,
 };
