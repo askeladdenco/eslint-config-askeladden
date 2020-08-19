@@ -8,14 +8,10 @@ module.exports = {
   ],
   parser: 'babel-eslint',
   rules: Object.assign({}, jsRules, {
-    // Because Flow can infer default props based on which props are listed in `defaultProps` we disable forbudDefaultForRequired
-    'react/require-default-props': [
-      2,
-      {
-        forbidDefaultForRequired: false,
-      },
-    ],
-    // We want to encourage destructuring, but in order to do this incrementally we'll onyl warng about it.
+    'react/require-default-props': 0,
+    "react/no-unused-prop-types": 0,
+    "react/prop-types": 0,
+    // We want to encourage destructuring, but in order to do this incrementally we'll on warng about it.
     // See https://github.com/yannickcr/eslint-plugin-react/issues/1731 for more info.
     'react/destructuring-assignment': ['warn', 'always'],
 
