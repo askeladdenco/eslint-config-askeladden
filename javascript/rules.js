@@ -22,4 +22,5 @@ module.exports = {
       "variables": false
     }
   ],
+  "no-console": 2
 };
