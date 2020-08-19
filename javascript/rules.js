@@ -25,4 +25,8 @@ module.exports = {
   ],
   "no-console": 2,
   "consistent-return": 0,
+  "import/no-extraneous-dependencies": [
+    "error",
+    { "devDependencies": ["**/*.test.ts", "**/*.spec.ts"] }
+  ],
 };
