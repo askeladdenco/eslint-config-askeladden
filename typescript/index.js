@@ -28,6 +28,9 @@ module.exports = {
           "{}": {
             "message": "This allows a function to be called with any argument. Remove {} entirely, or use object if you really want anything allowed.",
             "fixWith": ""
+          },
+          "React.FC": {
+            "message": "You do not need to type the return type of a React component. React.FC is discouraged, see https://github.com/facebook/create-react-app/pull/8177"
           }
         }
       }
