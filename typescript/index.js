@@ -26,7 +26,11 @@ module.exports = {
           },
 
           "{}": {
-            "message": "This allows a function to be called with any argument. Remove {} entirely, or use object if you really want anything allowed.",
+            "message":
+              "{} allows a function to be called with any argument.\n" +
+              "  - Consider removing the typing entirely.\n" +
+              "  - If you explicitly want an empty object, use Record\<never, never>.\n" +
+              "  - If you want to allow anything (discouraged), use unknown.",
             "fixWith": ""
           },
           "React.FC": {
