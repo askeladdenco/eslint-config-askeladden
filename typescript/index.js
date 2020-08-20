@@ -34,7 +34,10 @@ module.exports = {
             "fixWith": ""
           },
           "React.FC": {
-            "message": "You do not need to type the return type of a React component. React.FC is discouraged, see https://github.com/facebook/create-react-app/pull/8177"
+            "message": "You do not need to type the return type of a React component. React.FC is discouraged. See https://github.com/facebook/create-react-app/pull/8177"
+          },
+          "FC": {
+            "message": "You do not need to type the return type of a React component. React.FC is discouraged. See https://github.com/facebook/create-react-app/pull/8177"
           }
         }
       }
