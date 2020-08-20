@@ -6,10 +6,19 @@ This repo contains sets of opinionated linting rules (eslint-configs) for Askela
 
 ```sh
 npx install-peerdeps --dev @askeladden/eslint-config-askeladden
+```
 
-# Alternatively, install correct version of each package listed by:
+_If you're installing with yarn in a yarn workspaces repo, run with -W flag_
+``` 
+npm info "@askeladden/eslint-config-askeladden@latest" peerDependencies -x -W
+```
+
+
+_Alternatively, you can manually install correct version of each package listed by:_
+```
 npm info "@askeladden/eslint-config-askeladden@latest" peerDependencies
 ```
+
 
 ## Quick start
 
