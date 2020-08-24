@@ -13,8 +13,17 @@ module.exports = {
     "@typescript-eslint/interface-name-prefix": 0,
     "@typescript-eslint/no-empty-interface": 0,
 
-    // Disable TS-specific rules. This is already specified in the javascript package
-    "@typescript-eslint/no-use-before-define": 0,
+    // Needed to allow for ReturnType typedef.
+    "no-use-before-define": 0,
+    "@typescript-eslint/no-use-before-define": [
+      2,
+      {
+        "functions": false,
+        "classes": false,
+        "variables": false,
+        "typedefs": false
+      }
+    ],
 
     "@typescript-eslint/ban-types": [
       "error",
