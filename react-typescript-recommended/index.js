@@ -1,4 +1,5 @@
 module.exports = {
+  parser: '@typescript-eslint/parser',
   extends: [
     '../javascript',
     '../react',
@@ -7,4 +8,11 @@ module.exports = {
     '../prettier-react/',
     '../prettier-typescript/',
   ].map(require.resolve),
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
 };
