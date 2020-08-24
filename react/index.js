@@ -15,6 +15,10 @@ module.exports = {
     // See https://github.com/yannickcr/eslint-plugin-react/issues/1731 for more info.
     'react/destructuring-assignment': ['warn', 'always'],
     "react/jsx-curly-brace-presence": 0,
+    "react/static-property-placement": 0,
+    "react/destructuring-assignment": 0,
+    "react/state-in-constructor": 0,
+
     "react/jsx-props-no-spreading": 1,
 
     // Does not support dynamic type props :(
