@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['./javascript', './prettier'].map(require.resolve),
+  extends: ['./react-typescript-recommended'].map(require.resolve),
 };
