@@ -14,6 +14,9 @@ module.exports = {
     "react/no-unused-prop-types": 0,
     "react/prop-types": 0,
 
+    // Exhaustive deps feels unnecessary. Consider settings this to 2 when we get burnt.
+    "react-hooks/exhaustive-deps": 1,
+
     // Only for styling/consistency, often with undesirable defaults.
     // Can be considered in individual repos.
     "react/jsx-curly-brace-presence": 0,
