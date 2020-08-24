@@ -46,6 +46,10 @@ module.exports = {
         allowChildren: false,
       },
     ],
+
+    // Allows label-control connection being nested in DOM
+    "jsx-a11y/label-has-associated-control": [2, { "assert": "either" }],
+
     'react/no-did-mount-set-state': [0],
   }),
 };
