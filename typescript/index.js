@@ -13,6 +13,15 @@ module.exports = {
     "@typescript-eslint/interface-name-prefix": 0,
     "@typescript-eslint/no-empty-interface": 0,
 
+    // It should not be necessary to add two comments in TS-ignore cases
+    "@typescript-eslint/ban-ts-comment": 0,
+
+    // Using var x = require(...) is so uncommon, that it's on purpse when we do it
+    "@typescript-eslint/no-var-requires": 0,
+
+    // Sometimes you need empty functions to fulfill required parameters.
+    "@typescript-eslint/no-empty-function": 0,
+
     // Needed to allow for ReturnType typedef.
     "no-use-before-define": 0,
     "@typescript-eslint/no-use-before-define": [
