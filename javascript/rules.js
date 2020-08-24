@@ -29,4 +29,16 @@ module.exports = {
     "error",
     { "devDependencies": ["**/*.test.ts", "**/*.spec.ts"] }
   ],
+
+  // The readability varies depending on the case. No need to enforce a rule.
+  "prefer-template": 0,
+  "prefer-destructuring": 0,
+  'import/prefer-default-export': 0,
+
+  // We use short-circuts and ternary function calls, though they can be less
+  //   readable. Could be considered removed.
+  "no-unused-expressions": [
+    2,
+    { "allowShortCircuit": true, "allowTernary": true, "allowTaggedTemplates": true }
+  ],
 };
