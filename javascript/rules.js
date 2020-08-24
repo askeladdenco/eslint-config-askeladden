@@ -59,4 +59,7 @@ module.exports = {
     2,
     { "allowShortCircuit": true, "allowTernary": true, "allowTaggedTemplates": true }
   ],
+
+  // Allow second parameter to be optional in parseInt
+  "radix": 0,
 };
