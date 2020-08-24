@@ -8,23 +8,29 @@ module.exports = {
   ],
   parser: 'babel-eslint',
   rules: Object.assign({}, jsRules, {
+    // React's PropTypes are discouraged
     'react/require-default-props': 0,
     "react/no-unused-prop-types": 0,
     "react/prop-types": 0,
-    // We want to encourage destructuring, but in order to do this incrementally we'll on warng about it.
-    // See https://github.com/yannickcr/eslint-plugin-react/issues/1731 for more info.
-    'react/destructuring-assignment': ['warn', 'always'],
+
+    // Only for styling/consistency, often with undesirable defaults.
+    // Can be considered in individual repos.
     "react/jsx-curly-brace-presence": 0,
     "react/static-property-placement": 0,
     "react/destructuring-assignment": 0,
     "react/state-in-constructor": 0,
 
+    // Potentially dangerous, but too practical to let go of.
     "react/jsx-props-no-spreading": 1,
 
-    // Does not support dynamic type props :(
+    // Does not support dynamic type prop, which we want.
+    // ref https://github.com/yannickcr/eslint-plugin-react/issues/1555
     "react/button-has-type": 0,
 
+    // Allow JSX in .js files
     'react/jsx-filename-extension': [0, { extensions: ['.jsx'] }],
+
+    // Ordering of react component methods
     'react/sort-comp': [
       1,
       {
