@@ -5,42 +5,40 @@ This repo contains sets of opinionated linting rules (eslint-configs) for Askela
 ## Installing
 
 ```sh
-npx install-peerdeps --dev @askeladden/eslint-config-askeladden
-```
-
-_If you're installing with yarn in a yarn workspaces repo, run with -W flag_
-``` 
 npx install-peerdeps --dev @askeladden/eslint-config-askeladden -x -W
-```
-
+``` 
 
 _Alternatively, you can manually install correct version of each package listed by:_
 ```
 npm info "@askeladden/eslint-config-askeladden@latest" peerDependencies
 ```
 
+_If you have a monorepo using e.g. Yarn workspaces, it's recommended to install 
+it in the common/root folder._
+
 
 ## Quick start
 
-Depending on your project, add one of these to your `.eslintrc` file, located in the root directory:
+### `.eslintrc`
 
-- **Pure JS:** `@askeladden/eslint-config-askeladden`
-- **React JS:** `@askeladden/eslint-config-askeladden/react-recommended`
-- **Typescript:** `@askeladden/eslint-config-askeladden/typescript-recommended`
-- **React with Typescript:** `@askeladden/eslint-config-askeladden/react-typescript-recommended`
-
-Example `.eslintrc` using **React with Typescript**:
+From the root directory of your (mono-)repo, create a config file `.eslintrc`.
 
 ```json
 {
-  "env": { "browser": true },
-  "extends": ["@askeladden/eslint-config-askeladden/react-typescript-recommended"]
+  "parser": "@typescript-eslint/parser",
+  "env": { "browser": true, "node": true },
+  "extends": ["@askeladden/eslint-config-askeladden"],
+  "rules": {}
 }
 ```
 
+_Note: the default export extended here is adapted to a React project with Typescript, formatted with Prettier. 
+It should also work for a non-React code base. If this does not fit your project, see [Slow start](#slow-start)._ 
+
+### `.eslintignore`
+
 You also want an ignore-file, ignoring all dist, build and node_modules folders:
 
-Example `.eslintignore`:
 ```
 **/dist/*
 **/build/*
@@ -49,7 +47,7 @@ Example `.eslintignore`:
 
 _These files should be placed in the root directory, also for multi-workspace mono repos_
 
-### Recommended tasks (in package.json)
+### `package.json` – recommended tasks
 ```json 
 "lint": "eslint .",
 "lint:ignore-warnings": "eslint . --quiet",
@@ -59,9 +57,10 @@ _These files should be placed in the root directory, also for multi-workspace mo
 
 _We recommend `lint:ignore-warnings` and `lint:prettier-check` to be run on CI test tasks, to prevent PRs with errors to be merged to master._
 
-### On commit hooks
+### Commit hooks
 
-We can use husky and lint-staged to identify and fix errors when we commit:
+We can use husky and lint-staged to identify errors when we commit, stopping us from commiting invalid code.
+This will also run prettier and fix some of the errors automatically.
 
 ```
 # Install dependencies
@@ -86,8 +85,6 @@ In `package.json`, define which tasks to be run on commit. We recommend on-commi
   ]
 },
 ```
-
-
 
 ## Slow start
 
@@ -120,10 +117,10 @@ For a given project, you will probably need several of them. For example: If you
 
 Instead of adding rule sets one by one, you can use one of four collections:
 
-- `@askeladden/eslint-config-askeladden`
+- `@askeladden/eslint-config-askeladden/javascript`
 - `@askeladden/eslint-config-askeladden/react-recommended`
 - `@askeladden/eslint-config-askeladden/typescript-recommended`
-- `@askeladden/eslint-config-askeladden/react-typescript-recommended`
+- `@askeladden/eslint-config-askeladden/react-typescript-recommended` (also available as just `@askeladden/eslint-config-askeladden`)
 
 You use collections in the same way you add rule sets: By adding them to the `extends` array in `.eslintrc`:
 
