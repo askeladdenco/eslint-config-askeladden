@@ -10,7 +10,7 @@ npx install-peerdeps --dev @askeladden/eslint-config-askeladden
 
 _If you're installing with yarn in a yarn workspaces repo, run with -W flag_
 ``` 
-npm info "@askeladden/eslint-config-askeladden@latest" peerDependencies -x -W
+npx install-peerdeps --dev @askeladden/eslint-config-askeladden -x -W
 ```
 
 
