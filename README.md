@@ -120,7 +120,10 @@ Instead of adding rule sets one by one, you can use one of four collections:
 - `@askeladden/eslint-config-askeladden/javascript`
 - `@askeladden/eslint-config-askeladden/react-recommended`
 - `@askeladden/eslint-config-askeladden/typescript-recommended`
-- `@askeladden/eslint-config-askeladden/react-typescript-recommended` (also available as just `@askeladden/eslint-config-askeladden`)
+- `@askeladden/eslint-config-askeladden/react-typescript-recommended`
+- `@askeladden/eslint-config-askeladden/react-native-typescript-recommended` 
+
+_`@askeladden/eslint-config-askeladden` can be used as shorthand for `@askeladden/eslint-config-askeladden/react-typescript-recommended`._
 
 You use collections in the same way you add rule sets: By adding them to the `extends` array in `.eslintrc`:
 
