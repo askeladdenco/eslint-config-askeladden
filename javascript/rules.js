@@ -8,6 +8,9 @@ module.exports = {
   // Do not allow use of undefined variables
   'no-undef': 2,
 
+  // Do not allow unused variables – a common cause of bugs
+  "no-unused-vars": 2,
+
   'no-underscore-dangle': 0,
 
   // Allow e.g. i++ in loops

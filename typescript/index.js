@@ -4,12 +4,15 @@ module.exports = {
     'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
   ],
   rules: {
+    // Extends javascript rule to include types and interfaces
+    "no-unused-vars": 0,
+    "@typescript-eslint/no-unused-vars": 2,
+
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/camelcase': 0,
     "@typescript-eslint/no-inferrable-types": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
-    "@typescript-eslint/no-unused-vars": 1,
     "@typescript-eslint/interface-name-prefix": 0,
     "@typescript-eslint/no-empty-interface": 0,
 
