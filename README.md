@@ -22,7 +22,7 @@ npm info "@askeladden/eslint-config-askeladden@latest" peerDependencies
 
 ## Quick start
 
-Depending on your project, add one of these to your `.eslintrc` file:
+Depending on your project, add one of these to your `.eslintrc` file, located in the root directory:
 
 - **Pure JS:** `@askeladden/eslint-config-askeladden`
 - **React JS:** `@askeladden/eslint-config-askeladden/react-recommended`
@@ -37,6 +37,57 @@ Example `.eslintrc` using **React with Typescript**:
   "extends": ["@askeladden/eslint-config-askeladden/react-typescript-recommended"]
 }
 ```
+
+You also want an ignore-file, ignoring all dist, build and node_modules folders:
+
+Example `.eslintignore`:
+```
+**/dist/*
+**/build/*
+**/node-modules/*
+```
+
+_These files should be placed in the root directory, also for multi-workspace mono repos_
+
+### Recommended tasks (in package.json)
+```json 
+"lint": "eslint .",
+"lint:ignore-warnings": "eslint . --quiet",
+"lint:prettier-check": "prettier --check \"**/*.{js,jsx,ts,tsx,json}\"",
+"lint:prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\""
+```
+
+_We recommend `lint:ignore-warnings` and `lint:prettier-check` to be run on CI test tasks, to prevent PRs with errors to be merged to master._
+
+### On commit hooks
+
+We can use husky and lint-staged to identify and fix errors when we commit:
+
+```
+# Install dependencies
+yarn add -D husky lint-staged
+```
+
+In `package.json`, define which tasks to be run on commit. We recommend on-commit hooks to fix and validate both eslint and prettier, which is included in the config below:
+
+```json
+"husky": {
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
+},
+"lint-staged": {
+  "*.{js,jsx,ts,tsx,css}": [
+    "prettier --write",
+    "eslint --quiet --fix"
+  ],
+  "*.{json, md}": [
+    "prettier --write"
+  ]
+},
+```
+
+
 
 ## Slow start
 
