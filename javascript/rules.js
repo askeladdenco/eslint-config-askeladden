@@ -44,6 +44,9 @@ module.exports = {
   // Required by some libraries, including typeorm
   "class-methods-use-this": 0,
 
+  // Class attributes look better without empty lines between each
+  "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+
   // Disallow depending on libraries not inside package.json
   "import/no-extraneous-dependencies": [
     2,
