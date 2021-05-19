@@ -70,6 +70,22 @@ _These files should be placed in the root directory, also for multi-workspace mo
 ```
 
 _We recommend `lint:ignore-warnings` and `lint:prettier-check` to be run on CI test tasks, to prevent PRs with errors to be merged to master._
+_These tasks should be placed in the root directory, also for multi-workspace mono repos_
+
+### `wercker.yml`
+
+If we are (still) using wercker when you read this, add steps to the test job for all branches that run the following checks:
+
+```
+linting:
+  steps:
+    - script:
+      name: ESLint check
+      code: npm run lint:ignore-warnings
+    - script:
+      name: Prettier check
+      code: npm run lint:prettier-check
+```
 
 ### Commit hooks
 
