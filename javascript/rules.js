@@ -41,6 +41,9 @@ module.exports = {
   // Allow implicit return of value undefined in functions where values can also be returned
   "consistent-return": 0,
 
+  // Required by some libraries, including typeorm
+  "class-methods-use-this": 0,
+
   // Disallow depending on libraries not inside package.json
   "import/no-extraneous-dependencies": [
     2,
