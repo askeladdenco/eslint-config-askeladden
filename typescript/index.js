@@ -4,13 +4,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
   ],
   rules: {
-    // Extends javascript rule to include types and interfaces
-    "no-unused-vars": 0,
-    "@typescript-eslint/no-unused-vars": 2,
-
-    // Avoid unnecessary imports
-    "unused-imports/no-unused-imports-ts": 2,
-
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/camelcase': 0,
     "@typescript-eslint/no-inferrable-types": 0,
@@ -18,6 +11,11 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/interface-name-prefix": 0,
     "@typescript-eslint/no-empty-interface": 0,
+
+    // Do not allow unused variables – a common cause of bugs. Use plugin.
+    "@typescript-eslint/no-unused-vars": 0,
+    "unused-imports/no-unused-vars": 2,
+    "unused-imports/no-unused-imports": 2,
 
     // It should not be necessary to add two comments in TS-ignore cases
     "@typescript-eslint/ban-ts-comment": 0,

@@ -8,8 +8,10 @@ module.exports = {
   // Do not allow use of undefined variables
   'no-undef': 2,
 
-  // Do not allow unused variables – a common cause of bugs
-  "no-unused-vars": 2,
+  // Do not allow unused variables – a common cause of bugs. Use plugin.
+  "no-unused-vars": 0,
+  "unused-imports/no-unused-vars": 2,
+  "unused-imports/no-unused-imports": 2,
 
   'no-underscore-dangle': 0,
 
