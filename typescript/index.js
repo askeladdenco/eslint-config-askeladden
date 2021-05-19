@@ -37,6 +37,9 @@ module.exports = {
       }
     ],
 
+    // Libraries like typedi inject based on constructur params.
+    'no-useless-constructor': 'off',
+
     "@typescript-eslint/ban-types": [
       "error",
       {
