@@ -8,6 +8,9 @@ module.exports = {
     "no-unused-vars": 0,
     "@typescript-eslint/no-unused-vars": 2,
 
+    // Avoid unnecessary imports
+    "unused-imports/no-unused-imports-ts": 2,
+
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/camelcase': 0,
     "@typescript-eslint/no-inferrable-types": 0,
