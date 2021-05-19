@@ -9,9 +9,9 @@ module.exports = {
   'no-undef': 2,
 
   // Do not allow unused variables – a common cause of bugs. Use plugin.
-  "no-unused-vars": 0,
-  "unused-imports/no-unused-vars": 2,
-  "unused-imports/no-unused-imports": 2,
+  'no-unused-vars': 0,
+  'unused-imports/no-unused-vars': 2,
+  'unused-imports/no-unused-imports': 2,
 
   'no-underscore-dangle': 0,
 
@@ -19,7 +19,7 @@ module.exports = {
   'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
 
   // Do not require default exports
-  "import/extensions": 0,
+  'import/extensions': 0,
   'import/order': [
     'error',
     {
@@ -28,46 +28,54 @@ module.exports = {
   ],
 
   // Do not use a variable before it's define, unless it's accessed after initialization
-  "no-use-before-define": [
+  'no-use-before-define': [
     2,
     {
-      "functions": false,
-      "classes": false,
-      "variables": false
-    }
+      functions: false,
+      classes: false,
+      variables: false,
+    },
   ],
 
   // Prevent accidental console logs
-  "no-console": 2,
+  'no-console': 2,
 
   // Allow implicit return of value undefined in functions where values can also be returned
-  "consistent-return": 0,
+  'consistent-return': 0,
 
   // Required by some libraries, including typeorm
-  "class-methods-use-this": 0,
+  'class-methods-use-this': 0,
 
   // Class attributes look better without empty lines between each
-  "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+  'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
 
   // Disallow depending on libraries not inside package.json
-  "import/no-extraneous-dependencies": [
+  'import/no-extraneous-dependencies': [
     2,
     // For test files, allow libraries only to be specified in devDependencies
-    { "devDependencies": ["**/tests/**", "**/*.test.*", "**/*.spec.*", "**/.storybook/**", "**/*.stories.*"] }
+    {
+      devDependencies: [
+        '**/tests/**',
+        '**/*.test.*',
+        '**/*.spec.*',
+        '**/.storybook/**',
+        '**/*.stories.*',
+      ],
+    },
   ],
 
   // The readability varies depending on the case. No need to enforce a rule.
-  "prefer-template": 0,
-  "prefer-destructuring": 0,
+  'prefer-template': 0,
+  'prefer-destructuring': 0,
   'import/prefer-default-export': 0,
 
   // We use short-circuit and ternary function calls, though they can be less
   //   readable. Could be considered removed at a later stage.
-  "no-unused-expressions": [
+  'no-unused-expressions': [
     2,
-    { "allowShortCircuit": true, "allowTernary": true, "allowTaggedTemplates": true }
+    { allowShortCircuit: true, allowTernary: true, allowTaggedTemplates: true },
   ],
 
   // Allow second parameter to be optional in parseInt
-  "radix": 0,
+  radix: 0,
 };

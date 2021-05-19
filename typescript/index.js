@@ -1,4 +1,4 @@
-const jsRules = require('../javascript/rules')
+const jsRules = require('../javascript/rules');
 const tsRules = require('./rules');
 
 module.exports = {

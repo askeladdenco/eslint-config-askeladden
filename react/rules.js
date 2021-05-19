@@ -30,13 +30,7 @@ module.exports = {
   'react/sort-comp': [
     1,
     {
-      order: [
-        'type-annotations',
-        'static-methods',
-        'lifecycle',
-        'everything-else',
-        'render',
-      ],
+      order: ['type-annotations', 'static-methods', 'lifecycle', 'everything-else', 'render'],
     },
   ],
   'jsx-a11y/label-has-for': [

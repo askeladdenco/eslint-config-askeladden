@@ -7,7 +7,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "release": "np"
+    "release": "np",
+    "lint:prettier-check": "prettier --check \"**/*.{js,jsx,ts,tsx,json}\"",
+    "lint:prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\""
   },
   "repository": {
     "type": "git",
