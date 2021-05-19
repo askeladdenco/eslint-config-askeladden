@@ -43,6 +43,20 @@ You also want an ignore-file, ignoring all dist, build and node_modules folders:
 **/dist/*
 **/build/*
 **/node-modules/*
+**/__mocks__/*
+**/.cache/*
+**/public/*
+coverage
+*.css
+*.json
+prettier.config.js
+```
+
+### `prettier.config.js`
+```
+const commonConfig = require('@askeladden/eslint-config-askeladden/prettier.config');
+
+module.exports = commonConfig;
 ```
 
 _These files should be placed in the root directory, also for multi-workspace mono repos_

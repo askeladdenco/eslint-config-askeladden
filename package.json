@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/askeladdenco/eslint-config.git"
+    "url": "git+https://github.com/askeladdenco/eslint-config-askeladden.git"
   },
   "author": "Tomas Fagerbekk <tomas@askeladden.co>",
   "license": "MIT",
