@@ -139,14 +139,14 @@ You use collections in the same way you add rule sets: By adding them to the `ex
 
 The following is a overview of the rules each collection includes:
 
-|                     | `default` | `react-recommended` | `typescript-reecommended` | `react-typescript-recommended` |
+|                     | `default` | `react-recommended` | `typescript-recommended` | `react-typescript-recommended` |
 | ------------------- | --------- | ------------------- | ------------------------- | ------------------------------ |
 | javascript          | ✅        | ✅                  | ✅                        | ✅                             |
 | prettier            | ✅        | ✅                  | ✅                        | ✅                             |
-| react               |           | ✅                  |                           | ✅                             |
-| prettier-react      |           | ✅                  |                           | ✅                             |
-| typescript          |           |                     | ✅                        | ✅                             |
-| prettier-typescript |           |                     | ✅                        | ✅                             |
+| react               | ✅        | ✅                  |                           | ✅                             |
+| prettier-react      | ✅        | ✅                  |                           | ✅                             |
+| typescript          | ✅        |                     | ✅                        | ✅                             |
+| prettier-typescript | ✅        |                     | ✅                        | ✅                             |
 
 ## Publishing
 
