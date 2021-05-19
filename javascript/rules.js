@@ -45,7 +45,7 @@ module.exports = {
   "import/no-extraneous-dependencies": [
     2,
     // For test files, allow libraries only to be specified in devDependencies
-    { "devDependencies": ["**/*.test.ts", "**/*.spec.ts"] }
+    { "devDependencies": ["**/*.test.*", "**/*.spec.*", "**/.storybook/**", "**/*.stories.*"] }
   ],
 
   // The readability varies depending on the case. No need to enforce a rule.
