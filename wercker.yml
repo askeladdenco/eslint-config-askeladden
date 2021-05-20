@@ -1,0 +1,20 @@
+box:
+  id: node
+  username: $DOCKERHUB_USERNAME
+  password: $DOCKERHUB_PASSWORD
+
+publish:
+  steps:
+    - script:
+      name: setup .npmrc
+      code: |
+        echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > "$WERCKER_ROOT/.npmrc"
+    - script:
+      name: set yarn cache
+      code: yarn config set cache-folder $WERCKER_CACHE_DIR/yarn
+    - script:
+      name: install dependencies
+      code: yarn --frozen-lockfile
+    - script
+      name: npm publish
+      code: yarn release
