@@ -42,7 +42,14 @@
     "prettier": "^2.0.5"
   },
   "devDependencies": {
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
     "semantic-release": "^17.4.3",
     "typescript": "^3.9.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
