@@ -43,6 +43,20 @@ You also want an ignore-file, ignoring all dist, build and node_modules folders:
 **/dist/*
 **/build/*
 **/node-modules/*
+**/__mocks__/*
+**/.cache/*
+**/public/*
+coverage
+*.css
+*.json
+prettier.config.js
+```
+
+### `prettier.config.js`
+```
+const commonConfig = require('@askeladden/eslint-config-askeladden/prettier.config');
+
+module.exports = commonConfig;
 ```
 
 _These files should be placed in the root directory, also for multi-workspace mono repos_
@@ -56,6 +70,22 @@ _These files should be placed in the root directory, also for multi-workspace mo
 ```
 
 _We recommend `lint:ignore-warnings` and `lint:prettier-check` to be run on CI test tasks, to prevent PRs with errors to be merged to master._
+_These tasks should be placed in the root directory, also for multi-workspace mono repos_
+
+### `wercker.yml`
+
+If we are (still) using wercker when you read this, add steps to the test job for all branches that run the following checks:
+
+```
+linting:
+  steps:
+    - script:
+      name: ESLint check
+      code: npm run lint:ignore-warnings
+    - script:
+      name: Prettier check
+      code: npm run lint:prettier-check
+```
 
 ### Commit hooks
 
@@ -139,14 +169,14 @@ You use collections in the same way you add rule sets: By adding them to the `ex
 
 The following is a overview of the rules each collection includes:
 
-|                     | `default` | `react-recommended` | `typescript-reecommended` | `react-typescript-recommended` |
+|                     | `default` | `react-recommended` | `typescript-recommended` | `react-typescript-recommended` |
 | ------------------- | --------- | ------------------- | ------------------------- | ------------------------------ |
 | javascript          | ✅        | ✅                  | ✅                        | ✅                             |
 | prettier            | ✅        | ✅                  | ✅                        | ✅                             |
-| react               |           | ✅                  |                           | ✅                             |
-| prettier-react      |           | ✅                  |                           | ✅                             |
-| typescript          |           |                     | ✅                        | ✅                             |
-| prettier-typescript |           |                     | ✅                        | ✅                             |
+| react               | ✅        | ✅                  |                           | ✅                             |
+| prettier-react      | ✅        | ✅                  |                           | ✅                             |
+| typescript          | ✅        |                     | ✅                        | ✅                             |
+| prettier-typescript | ✅        |                     | ✅                        | ✅                             |
 
 ## Publishing
 
