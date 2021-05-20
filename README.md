@@ -1,6 +1,6 @@
 # Askeladden eslint config
 
-This repo contains sets of opinionated linting rules (eslint-configs) for Askeladden projects
+This repo contains sets of opinionated linting rules (eslint-configs) for Askeladden projects.
 
 ## Installing
 
