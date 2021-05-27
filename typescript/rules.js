@@ -1,5 +1,6 @@
 module.exports = {
-  '@typescript-eslint/indent': ['error', 2],
+  // Typescript style rules are a bit odd (to us)
+  '@typescript-eslint/indent': 0,
   '@typescript-eslint/camelcase': 0,
   '@typescript-eslint/no-inferrable-types': 0,
   '@typescript-eslint/explicit-function-return-type': 0,
@@ -35,6 +36,10 @@ module.exports = {
 
   // Libraries like typedi inject based on constructur params.
   'no-useless-constructor': 'off',
+
+  // Regular no-shadow rules doesn't handle Typescript enums
+  'no-shadow': 0,
+  '@typescript-eslint/no-shadow': 2,
 
   '@typescript-eslint/ban-types': [
     'error',
