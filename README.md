@@ -178,12 +178,6 @@ The following is a overview of the rules each collection includes:
 | typescript          | ✅        |                     | ✅                        | ✅                             |
 | prettier-typescript | ✅        |                     | ✅                        | ✅                             |
 
-## Publishing
+## Publishing new versions
 
-This package is hosted on npm under @askeladden/eslint-config-askeladden namespace and is published using [`np`](https://github.com/sindresorhus/np). To publish a new version, run
-
-```sh
-yarn run release
-```
-
-Doing so guides you through publishing to npm, pushing tags to Github and create release notes.
+Commits are linted with with [commitizen](https://www.npmjs.com/package/commitizen) and automatically published to npm on push to master, using [semantic release](https://www.npmjs.com/package/semantic-release).
