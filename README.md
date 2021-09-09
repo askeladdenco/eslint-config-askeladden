@@ -181,3 +181,5 @@ The following is a overview of the rules each collection includes:
 ## Publishing new versions
 
 Commits are linted with with [commitizen](https://www.npmjs.com/package/commitizen) and automatically published to npm on push to master, using [semantic release](https://www.npmjs.com/package/semantic-release).
+
+They are automatically published to NPM on push to master branch via Wercker CI.
