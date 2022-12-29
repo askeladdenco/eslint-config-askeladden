@@ -14,3 +14,5 @@ jobs:
           auth-token: ${{ secrets.ACO_NPM_AUTH_TOKEN }}
       - name: yarn release
         run: yarn release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.ACO_NPM_AUTH_TOKEN }}
