@@ -16,7 +16,8 @@ jobs:
       - uses: askeladdenco/actions/yarn-install@master
         with:
           auth-token: ${{ secrets.ACO_NPM_AUTH_TOKEN }}
-      - name: yarn release
-        run: yarn release
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@v3
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.ACO_NPM_AUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.ACO_NPM_AUTH_TOKEN }}
