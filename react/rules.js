@@ -47,4 +47,12 @@ module.exports = {
   'jsx-a11y/label-has-associated-control': [2, { assert: 'either' }],
 
   'react/no-did-mount-set-state': [0],
+
+  // Allow arrow functions for component defintions
+  'react/function-component-definition': [
+    'error',
+    {
+      namedComponents: ['function-declaration', 'arrow-function'],
+    },
+  ],
 };
