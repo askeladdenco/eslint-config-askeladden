@@ -126,7 +126,6 @@ In `package.json`, define which tasks to be run on commit. We recommend on-commi
 - react
 - typescript
 - prettier
-- prettier-typescript
 
 For a given project, you will probably need several of them. For example: If you want to add `javascript` and `react` and `prettier` to your repo, add the following to your `.eslintrc` config:
 
@@ -169,13 +168,12 @@ You use collections in the same way you add rule sets: By adding them to the `ex
 
 The following is a overview of the rules each collection includes:
 
-|                     | `default` | `react-recommended` | `typescript-recommended` | `react-typescript-recommended` |
-| ------------------- | --------- | ------------------- | ------------------------ | ------------------------------ |
-| javascript          | ✅        | ✅                  | ✅                       | ✅                             |
-| prettier            | ✅        | ✅                  | ✅                       | ✅                             |
-| react               | ✅        | ✅                  |                          | ✅                             |
-| typescript          | ✅        |                     | ✅                       | ✅                             |
-| prettier-typescript | ✅        |                     | ✅                       | ✅                             |
+|            | `default` | `react-recommended` | `typescript-recommended` | `react-typescript-recommended` |
+| ---------- | --------- | ------------------- | ------------------------ | ------------------------------ |
+| javascript | ✅        | ✅                  | ✅                       | ✅                             |
+| prettier   | ✅        | ✅                  | ✅                       | ✅                             |
+| react      | ✅        | ✅                  |                          | ✅                             |
+| typescript | ✅        |                     | ✅                       | ✅                             |
 
 ## Publishing new versions
 

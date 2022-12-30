@@ -5,13 +5,7 @@ const reactRules = require('../react/rules');
 
 module.exports = {
   parser: '@typescript-eslint/parser',
-  extends: [
-    '../javascript',
-    '../react',
-    '../typescript',
-    '../prettier',
-    '../prettier-typescript/',
-  ].map(require.resolve),
+  extends: ['../javascript', '../react', '../typescript', '../prettier'].map(require.resolve),
   rules: Object.assign({}, jsRules, tsRules, reactRules, prettierRules),
   settings: {
     'import/resolver': {
