@@ -10,7 +10,6 @@ module.exports = {
     '../react',
     '../typescript',
     '../prettier',
-    '../prettier-react/',
     '../prettier-typescript/',
   ].map(require.resolve),
   rules: Object.assign({}, jsRules, tsRules, reactRules, prettierRules),

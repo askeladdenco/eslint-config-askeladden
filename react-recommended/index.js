@@ -3,6 +3,6 @@ const reactRules = require('../react/rules');
 const prettierRules = require('../prettier/rules');
 
 module.exports = {
-  extends: ['../javascript', '../react', '../prettier', '../prettier-react/'].map(require.resolve),
+  extends: ['../javascript', '../react', '../prettier'].map(require.resolve),
   rules: Object.assign({}, jsRules, reactRules, prettierRules),
 };

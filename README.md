@@ -6,16 +6,16 @@ This repo contains sets of opinionated linting rules (eslint-configs) for Askela
 
 ```sh
 npx install-peerdeps --dev @askeladden/eslint-config-askeladden -x -W
-``` 
+```
 
 _Alternatively, you can manually install correct version of each package listed by:_
+
 ```
 npm info "@askeladden/eslint-config-askeladden@latest" peerDependencies
 ```
 
-_If you have a monorepo using e.g. Yarn workspaces, it's recommended to install 
+_If you have a monorepo using e.g. Yarn workspaces, it's recommended to install
 it in the common/root folder._
-
 
 ## Quick start
 
@@ -32,8 +32,8 @@ From the root directory of your (mono-)repo, create a config file `.eslintrc`.
 }
 ```
 
-_Note: the default export extended here is adapted to a React project with Typescript, formatted with Prettier. 
-It should also work for a non-React code base. If this does not fit your project, see [Slow start](#slow-start)._ 
+_Note: the default export extended here is adapted to a React project with Typescript, formatted with Prettier.
+It should also work for a non-React code base. If this does not fit your project, see [Slow start](#slow-start)._
 
 ### `.eslintignore`
 
@@ -53,6 +53,7 @@ prettier.config.js
 ```
 
 ### `prettier.config.js`
+
 ```
 const commonConfig = require('@askeladden/eslint-config-askeladden/prettier.config');
 
@@ -62,7 +63,8 @@ module.exports = commonConfig;
 _These files should be placed in the root directory, also for multi-workspace mono repos_
 
 ### `package.json` – recommended tasks
-```json 
+
+```json
 "lint": "eslint .",
 "lint:ignore-warnings": "eslint . --quiet",
 "lint:prettier-check": "prettier --check \"**/*.{js,jsx,ts,tsx,json}\"",
@@ -124,10 +126,9 @@ In `package.json`, define which tasks to be run on commit. We recommend on-commi
 - react
 - typescript
 - prettier
-- prettier-react
 - prettier-typescript
 
-For a given project, you will probably need several of them. For example: If you want to add `javascript` and `react`, `prettier` and `prettier-react` to your repo, add the following to your `.eslintrc` config:
+For a given project, you will probably need several of them. For example: If you want to add `javascript` and `react` and `prettier` to your repo, add the following to your `.eslintrc` config:
 
 ```json
 {
@@ -137,8 +138,7 @@ For a given project, you will probably need several of them. For example: If you
   "extends": [
     "@askeladden/eslint-config-askeladden/javascript",
     "@askeladden/eslint-config-askeladden/react",
-    "@askeladden/eslint-config-askeladden/prettier",
-    "@askeladden/eslint-config-askeladden/prettier-react"
+    "@askeladden/eslint-config-askeladden/prettier"
   ]
 }
 ```
@@ -151,7 +151,7 @@ Instead of adding rule sets one by one, you can use one of four collections:
 - `@askeladden/eslint-config-askeladden/react-recommended`
 - `@askeladden/eslint-config-askeladden/typescript-recommended`
 - `@askeladden/eslint-config-askeladden/react-typescript-recommended`
-- `@askeladden/eslint-config-askeladden/react-native-typescript-recommended` 
+- `@askeladden/eslint-config-askeladden/react-native-typescript-recommended`
 
 _`@askeladden/eslint-config-askeladden` can be used as shorthand for `@askeladden/eslint-config-askeladden/react-typescript-recommended`._
 
@@ -170,13 +170,12 @@ You use collections in the same way you add rule sets: By adding them to the `ex
 The following is a overview of the rules each collection includes:
 
 |                     | `default` | `react-recommended` | `typescript-recommended` | `react-typescript-recommended` |
-| ------------------- | --------- | ------------------- | ------------------------- | ------------------------------ |
-| javascript          | ✅        | ✅                  | ✅                        | ✅                             |
-| prettier            | ✅        | ✅                  | ✅                        | ✅                             |
-| react               | ✅        | ✅                  |                           | ✅                             |
-| prettier-react      | ✅        | ✅                  |                           | ✅                             |
-| typescript          | ✅        |                     | ✅                        | ✅                             |
-| prettier-typescript | ✅        |                     | ✅                        | ✅                             |
+| ------------------- | --------- | ------------------- | ------------------------ | ------------------------------ |
+| javascript          | ✅        | ✅                  | ✅                       | ✅                             |
+| prettier            | ✅        | ✅                  | ✅                       | ✅                             |
+| react               | ✅        | ✅                  |                          | ✅                             |
+| typescript          | ✅        |                     | ✅                       | ✅                             |
+| prettier-typescript | ✅        |                     | ✅                       | ✅                             |
 
 ## Publishing new versions
 
