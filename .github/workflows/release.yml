@@ -9,13 +9,10 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Use .npmrc
-        uses: bduff9/use-npmrc@v1.1
-        with:
-          dot-npmrc: ${{ secrets.ACO_NPM_AUTH_TOKEN }}
-      - uses: askeladdenco/actions/yarn-install@master
-        with:
-          auth-token: ${{ secrets.ACO_NPM_AUTH_TOKEN }}
+      - uses: actions/checkout@v2
+
+      - uses: bahmutov/npm-install@v1
+
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
         env:
