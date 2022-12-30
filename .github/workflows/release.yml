@@ -9,12 +9,14 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: askeladdenco/actions/yarn-install@master
+        with:
+          auth-token: ${{ secrets.ACO_NPM_AUTH_TOKEN }}
 
-      - uses: bahmutov/npm-install@v1
-
-      - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v3
+      - name: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.ACO_NPM_AUTH_TOKEN }}
+          NPM_CONFIG_USERCONFIG: ${{ github.workspace }}/.npmrc
+        run: |
+          echo '//registry.npmjs.org/:_authToken=${{ secrets.ACO_NPM_AUTOMATION_ACCESS_TOKEN }}' > ${{ github.workspace }}/.npmrc
+          yarn release
