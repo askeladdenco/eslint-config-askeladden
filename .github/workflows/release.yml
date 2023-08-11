@@ -12,6 +12,7 @@ jobs:
       - uses: askeladdenco/actions/yarn-install@master
         with:
           auth-token: ${{ secrets.ACO_NPM_AUTH_TOKEN }}
+          node-version: 18.0.0
 
       - name: yarn release
         env:
